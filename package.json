@@ -1,0 +1,42 @@
+{
+  "name": "logseq-everdo-plugin",
+  "version": "0.0.1",
+  "description": "Adds a slash command to send a block to your Everdo inbox.",
+  "main": "dist/index.html",
+  "default": "dist/index.html",
+  "author": "Roy Miller",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eightbt/logseq-everdo-plugin"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "parcel public/index.html --public-url ./",
+    "build": "npm run clean; parcel build --no-source-maps"
+  },
+  "logseq": {
+    "id": "logseq-everdo-plugin",
+    "title": "Send to Everdo"
+  },
+  "targets": {
+    "defualt": {
+      "publicUrl": "./",
+      "source": "public/index.html"
+    }
+  },
+  "dependencies": {
+    "@logseq/libs": "^0.0.10"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "parcel": "^2.0.1",
+    "typescript": "^4.4.4"
+  }
+}
